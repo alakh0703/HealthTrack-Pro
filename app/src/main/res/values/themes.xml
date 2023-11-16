@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.LabAssignment4_COMP304_004_Alakh_Dhrumit" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.LabAssignment4_COMP304_004_Alakh_Dhrumit" parent="Base.Theme.LabAssignment4_COMP304_004_Alakh_Dhrumit" />
+</resources>

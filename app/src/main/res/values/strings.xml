@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">LabAssignment4_COMP304_004_Alakh_Dhrumit</string>
+    <string name="add_patient">Add Patient</string>
+    <array name="departments">
+        <item>Department A</item>
+        <item>Department B</item>
+        <item>Department C</item>
+    </array>
+    <string-array name="test_results_array">
+        <item>Negative</item>
+        <item>Positive</item>
+    </string-array>
+</resources>
+
