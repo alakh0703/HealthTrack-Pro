@@ -8,6 +8,11 @@ import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
+<<<<<<< HEAD
+import com.example.labassignment4_comp304_004_alakh_dhrumit.R
+
+class SignUp : AppCompatActivity() {
+=======
 import androidx.lifecycle.ViewModelProvider
 import com.example.labassignment4_comp304_004_alakh_dhrumit.Model.dbNurse.Nurse
 import com.example.labassignment4_comp304_004_alakh_dhrumit.Model.dbNurse.NurseDatabase
@@ -18,6 +23,7 @@ import com.example.labassignment4_comp304_004_alakh_dhrumit.ViewModel.NurseViewM
 class SignUp : AppCompatActivity() {
     private lateinit var viewModel: NurseViewModel
 
+>>>>>>> master
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
@@ -34,11 +40,18 @@ class SignUp : AppCompatActivity() {
         signUpBtn.setOnClickListener {
             createAccount()
         }
+<<<<<<< HEAD
+
+    }
+
+    private fun createAccount(){
+=======
         // Initialize ViewModel using ViewModelProvider and NurseViewModelFactory
         val dao = NurseDatabase.getInstance(applicationContext).nurseDao()
         viewModel = ViewModelProvider(this, NurseViewModelFactory(dao)).get(NurseViewModel::class.java)
     }
         private fun createAccount(){
+>>>>>>> master
         val firstNameEdit: EditText = findViewById(R.id.editTextFirstName)
         val lastNameEdit: EditText = findViewById(R.id.editTextLastName)
         val nurseIdEdit: EditText = findViewById(R.id.editTextNurseId)
@@ -47,13 +60,20 @@ class SignUp : AppCompatActivity() {
 
         val firstName = firstNameEdit.text.toString().trim()
         val lastName = lastNameEdit.text.toString().trim()
+<<<<<<< HEAD
+        val nurseId = nurseIdEdit.text.toString().trim()
+=======
         var nurseId = nurseIdEdit.text.toString().trim()
+>>>>>>> master
         val password = passwordEdit.text.toString().trim()
         val department = spinner.selectedItem.toString()
         if (validateInput(firstName, lastName, nurseId, password, department)) {
             // TODO: Add Nurse to the Database and redirect to the login page
+<<<<<<< HEAD
+=======
             val nurse = Nurse(nurseId=nurseId, firstName = firstName, lastName = lastName, department = department, password = password)
             viewModel.insertNurse(nurse)
+>>>>>>> master
         } else {
             makeToast("Please fill all the fields!")
         }
@@ -76,10 +96,19 @@ class SignUp : AppCompatActivity() {
             return false
         }
 
+<<<<<<< HEAD
+        // Add more validation as needed
+
+=======
+>>>>>>> master
         return true
     }
 
     private fun makeToast(message: String){
         Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master

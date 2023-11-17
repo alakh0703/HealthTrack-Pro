@@ -1,7 +1,10 @@
 package com.example.labassignment4_comp304_004_alakh_dhrumit.View
 
 import android.annotation.SuppressLint
+<<<<<<< HEAD
+=======
 import android.content.Context
+>>>>>>> master
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +13,16 @@ import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
+<<<<<<< HEAD
+import com.example.labassignment4_comp304_004_alakh_dhrumit.R
+import java.time.ZoneId
+
+class AddPatient : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_add_patient)
+=======
 import androidx.lifecycle.ViewModelProvider
 import com.example.labassignment4_comp304_004_alakh_dhrumit.Model.dbNurse.Nurse
 import com.example.labassignment4_comp304_004_alakh_dhrumit.Model.dbPatient.Patient
@@ -134,6 +147,7 @@ class AddPatient : AppCompatActivity() {
         val nurseIdEditText0 : EditText = findViewById(R.id.editTextNurseId)
         makeToast(current_user)
         nurseIdEditText0.setText(current_user)
+>>>>>>> master
 
         val cancelBtn: TextView = findViewById(R.id.cancel_btn)
 
@@ -146,6 +160,11 @@ class AddPatient : AppCompatActivity() {
             addPatient()
         }
 
+<<<<<<< HEAD
+    }
+
+    private fun addPatient() {
+=======
         // Assuming you've set up PatientDao and PatientDatabase correctly
         val patientDao = PatientDatabase.getInstance(applicationContext).patientDao()
 
@@ -158,6 +177,7 @@ class AddPatient : AppCompatActivity() {
     }
 
         private fun addPatient() {
+>>>>>>> master
         val patientIdEdit: EditText = findViewById(R.id.editTextPatientId)
         val firstNameEdit: EditText = findViewById(R.id.editTextFirstName)
         val lastNameEdit: EditText = findViewById(R.id.editTextLastName)
@@ -176,6 +196,12 @@ class AddPatient : AppCompatActivity() {
         val department = departmentSpinner.selectedItem.toString()
         if (validatePatientInput(patientId, firstName, lastName, nurseId, roomNo, age, department)) {
             // TODO: Add a new patient to the patient table and redirect to viewPatient Activity
+<<<<<<< HEAD
+        } else {
+            makeToast("Please fill all the fields!")
+
+        }
+=======
             makeToast("FUCK")
 
 
@@ -199,6 +225,7 @@ class AddPatient : AppCompatActivity() {
             makeToast("Nurse ID doesn't Exist")
             }
 
+>>>>>>> master
     }
 
     private fun validatePatientInput(
@@ -240,15 +267,23 @@ class AddPatient : AppCompatActivity() {
 
         return true
     }
+<<<<<<< HEAD
+=======
     // Retrieve username from SharedPreferences
     private fun getSavedUsername(): String {
         val sharedPreferences = getSharedPreferences("MyUser", Context.MODE_PRIVATE)
         return sharedPreferences.getString("username", "") ?: ""
     }
+>>>>>>> master
 
 
     private fun makeToast(message: String){
         Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
+<<<<<<< HEAD
+
+}
+=======
 }
 
+>>>>>>> master

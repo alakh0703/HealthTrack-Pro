@@ -1,7 +1,10 @@
 package com.example.labassignment4_comp304_004_alakh_dhrumit.View
 
 
+<<<<<<< HEAD
+=======
 import android.content.Context
+>>>>>>> master
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +12,15 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+<<<<<<< HEAD
+import com.example.labassignment4_comp304_004_alakh_dhrumit.R
+
+open class Login : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_login)
+
+=======
 //import androidx.lifecycle.ViewModelProvider
 import com.example.labassignment4_comp304_004_alakh_dhrumit.Model.dbNurse.NurseDatabase
 import com.example.labassignment4_comp304_004_alakh_dhrumit.R
@@ -91,6 +103,7 @@ class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+>>>>>>> master
         val createAccountTextView: TextView = findViewById(R.id.textViewCreateAccount)
         val loginBtn :Button = findViewById(R.id.buttonLogin)
 
@@ -102,6 +115,8 @@ class Login : AppCompatActivity() {
             // Start the SignUpActivity when the TextView is clicked
             startActivity(Intent(this, SignUp::class.java))
         }
+<<<<<<< HEAD
+=======
         val dao = NurseDatabase.getInstance(applicationContext).nurseDao()
         val factory = NurseViewModelFactory(dao)
         nurseViewModel = ViewModelProvider(this, factory).get(NurseViewModel::class.java)
@@ -121,6 +136,7 @@ class Login : AppCompatActivity() {
         val editor = sharedPreferences.edit()
         editor.putString("username", username)
         editor.apply()
+>>>>>>> master
     }
 
     private fun login(){
@@ -135,6 +151,24 @@ class Login : AppCompatActivity() {
             return
         }
         else {
+<<<<<<< HEAD
+            val isAuthenticated = checkCredentials(username, password)
+            if(isAuthenticated){
+                // TODO : Save the Nurse ID to preferences
+                startActivity(Intent(this,Records::class.java))
+            }
+        }
+    }
+    private fun checkCredentials(username: String, password: String): Boolean {
+        // TODO : Authenticate user from the database
+        return true
+    }
+
+    private fun makeToast(message: String){
+        Toast.makeText(this,message,Toast.LENGTH_LONG).show()
+    }
+}
+=======
             checkCredentials(username, password) {
                 isValid->
                 if(isValid){
@@ -172,3 +206,4 @@ class Login : AppCompatActivity() {
 
 
 
+>>>>>>> master
