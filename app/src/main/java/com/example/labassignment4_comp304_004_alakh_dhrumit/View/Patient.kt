@@ -5,6 +5,10 @@ data class Patient(
     val firstname: String,
     val lastname: String,
     val department: String,
+<<<<<<< HEAD
     val nurseId: Long,
+=======
+    val nurseId: Int,
+>>>>>>> master
     val room: String
 )

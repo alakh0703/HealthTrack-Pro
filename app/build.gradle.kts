@@ -44,8 +44,13 @@ android {
 
 dependencies {
     // Define the versions
+<<<<<<< HEAD
     val roomVersion = "2.3.0"
     val lifecycleVersion = "2.4.0-alpha02"
+=======
+    val roomVersion = "2.6.0"
+    val lifecycleVersion = "2.7.0-rc01"
+>>>>>>> master
 
     // ViewModel and LiveData
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
